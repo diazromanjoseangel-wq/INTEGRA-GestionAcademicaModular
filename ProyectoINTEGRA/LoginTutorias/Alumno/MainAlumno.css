@@ -1,0 +1,263 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif; /* Define la fuente principal como Arial,
+                                       y si no está disponible, usa cualquier sans-serif */
+    margin: 0;                      /* Elimina el margen exterior por defecto del navegador */
+    padding: 0;                     /* Elimina el relleno interior por defecto del navegador */
+}
+
+/*--ENCABEZADO----------------------------------------------------------------------------------------------------*/
+/* ----- Encabezado principal ----- */
+    header {
+        background-color: #ffffff;       /* Fondo blanco del encabezado */
+        color: #002f6c;                  /* Color azul institucional para texto */
+        display: flex;                   /* Organiza el contenido en un contenedor flexible */
+        justify-content: space-between;  /* Coloca los elementos en extremos opuestos (izq/der) */
+        align-items: center;             /* Centra los elementos verticalmente dentro del header */
+        padding: 15px 25px;              /* Espaciado interno: 15px vertical, 25px horizontal */
+        margin-bottom: 0px;              /* Elimina espacio exterior debajo del header */
+    }
+/* ----- Logos dentro del header ----- */
+    header img {
+        height: 70px;   /* Altura fija de los logos */
+        width: auto;    /* El ancho se ajusta proporcionalmente para no deformar la imagen */
+    }
+    .logo-izq {
+        margin-right: 30px; /* Separación entre logo izquierdo y el contenido siguiente */
+    }
+    .logo-der {
+        margin-left: 20px;  /* Separación entre logo derecho y el contenido anterior */
+    }
+/* ----- Contenedor de texto central ----- */
+    .titulo {
+        display: flex;              /* Activa diseño flexible para organizar h2 y h3 */
+        flex-direction: column;     /* Apila el h2 arriba y el h3 abajo (columna) */
+        flex: 1;                    /* Ocupa todo el espacio disponible en el centro */
+    }
+/* h2 alineado a la izquierda */
+    .titulo h2 {
+        font-size: 35px;        /* Tamaño grande para el título principal */
+        margin: 0;              /* Sin márgenes extras */
+        text-align: left;       /* Alineación a la izquierda */
+        margin-left: 10px;      /* Pequeño espacio desde el borde izquierdo */
+    }
+/* h3 alineado a la derecha */
+    .titulo h3 {
+        font-size: 25px;        /* Tamaño más pequeño que el h2 */
+        margin: 0;              /* Sin márgenes extras */
+        text-align: right;      /* Alineación a la derecha */
+        margin-right: 10px;     /* Pequeño espacio desde el borde derecho */
+    }
+/* ----- Barras inferiores (sub-header decorativas) ----- */
+    .sub-header.azul {
+        height: 15px;               /* Altura de la franja */
+        margin-bottom: 5px;         /* Espacio debajo de la franja */
+        background-color: #002f6c;  /* Azul institucional */
+    }
+    .sub-header.verde {
+        height: 15px;               /* Altura de la franja */
+        margin-bottom: 5px;         /* Espacio debajo de la franja */
+        background-color: #00703c;  /* Verde institucional */
+    }
+/*--CONTENEDOR----------------------------------------------------------------------------------------------------*/
+/* --------------------------
+   BARRA VERDE INSTITUCIONAL
+-------------------------- */
+    .barra-verde {
+        width: 10px;                /* Grosor de la barra */
+        height: 400px;              /* Altura de la barra */
+        background-color: #00703c;  /* Verde institucional */
+        position: absolute;          /* Posicionamiento absoluto */
+        top: 230px;                  /* Distancia desde arriba */
+        left: 40px;                  /* Cercana al borde izquierdo */
+        border-top-left-radius: 10px;  /* Redondea esquina superior izquierda */
+        border-top-right-radius: 10px; /* Redondea esquina superior derecha */
+    }
+/* --------------------------
+   BARRA AZUL INSTITUCIONAL
+-------------------------- */
+    .barra-azul {
+        width: 10px;                 /* Grosor de la barra */
+        height: 400px;               /* Altura de la barra */
+        background-color: #002f6c;   /* Azul institucional */
+        position: absolute;           /* Posicionamiento absoluto */
+        top: 100px;                   /* Distancia desde arriba */
+        left: 20px;                   /* Cercana al borde izquierdo */
+        border-bottom-left-radius: 10px;  /* Redondea esquina inferior izquierda */
+        border-bottom-right-radius: 10px; /* Redondea esquina inferior derecha */
+    }
+/* --------------------------
+   CONTENEDOR
+-------------------------- */
+/* Contenedor principal */
+    .container {
+        max-width: 1100px;   /* Define un ancho máximo de 1100px (no crecerá más de eso) */
+        margin: 0 auto;      /* Centra el contenedor horizontalmente en la página */
+        padding: 20px;       /* Agrega espacio interno alrededor del contenido */
+    }
+/* Información superior */
+    .info {
+        display: flex;                     /* Organiza los elementos hijos en un layout flexible */
+        justify-content: space-between;    /* Separa los elementos: uno a la izquierda y otro a la derecha */
+        margin-bottom: 10px;               /* Espacio inferior para separarlo del siguiente bloque */
+    }
+/* Barra de progreso */
+    .progress {
+        margin: 10px 0;    /* Espacio arriba y abajo de la barra de progreso */
+    }
+    .progress-bar {
+        display: inline-block;   /* Se comporta como bloque en línea, permitiendo que haya varias barras seguidas */
+        width: 100px;            /* Ancho fijo de la barra */
+        height: 15px;            /* Alto fijo de la barra */
+        border: 1px solid #555;  /* Borde gris oscuro alrededor */
+        margin-right: 5px;       /* Espacio a la derecha (separación entre varias barras) */
+        border-radius: 5px;      /* Bordes redondeados */
+    }
+/* Tabla */
+    .table-container {
+        margin-top: 15px;          /* Espacio superior para separar del bloque anterior */
+        background-color: #ddd;    /* Fondo gris claro */
+        padding: 10px;             /* Espacio interno alrededor de la tabla */
+        border-radius: 5px;        /* Bordes redondeados */
+    }
+    table {
+        width: 100%;               /* Ocupa todo el ancho disponible */
+        border-collapse: collapse; /* Colapsa bordes para que no se dupliquen */
+        background: #ddd;          /* Fondo gris claro */
+    }
+    th, td {
+        border: 1px solid black;   /* Borde negro en celdas */
+        text-align: center;        /* Alineación centrada del texto */
+        padding: 6px;              /* Espaciado interno en celdas */
+    }
+    th {
+        background: #cfcfcf;       /* Fondo gris más oscuro para diferenciar los encabezados */
+    }
+/*--OPCIONES------------------------------------------------------------------------------------------------------*/
+/* --------------------------
+   SIDEBAR
+-------------------------- */
+    .sidebar {
+        position: fixed;      /* Fija la barra en la pantalla */
+        right: 15px;          /* Separación del borde derecho */
+        top: 100px;           /* Separación desde la parte superior */
+        display: flex;        /* Organiza los elementos en columna */
+        flex-direction: column;
+        height: 80vh;         /* Altura del sidebar */
+    }
+/* --------------------------
+   ICONOS DEL SIDEBAR
+-------------------------- */
+    .sidebar a img {
+        width: 50px;                  /* Ancho fijo de los iconos */
+        height: 50px;                 /* Alto fijo de los iconos */
+        cursor: pointer;              /* Cambia el cursor al pasar por encima */
+        transition: transform 0.2s ease-in-out; /* Animación al escalar */
+    }
+/* --------------------------
+   EFECTO HOVER EN LOS ICONOS
+-------------------------- */
+    .sidebar a img:hover {
+        transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
+    }
+/* --------------------------
+   ICONO SUPERIOR (SALIDA)
+-------------------------- */
+    .top-icon img {
+        margin-top: 50px; /* Ajusta este valor para mover Salida más abajo */
+    }
+/* --------------------------
+   ICONOS INFERIORES (ARCHIVO, CALENDARIO, NOTIFICACIÓN)
+-------------------------- */
+    .bottom-icons {
+        display: flex;          /* Organiza los iconos inferiores */
+        flex-direction: column; /* Los coloca en columna */
+        gap: 15px;              /* Separación entre cada icono */
+        margin-top: auto;       /* Empuja este grupo al fondo del sidebar */
+    }
+/*--CALENDARIO----------------------------------------------------------------------------------------------------*/
+/* --- Modal del calendario --- */
+/* ------------------------------
+   MODAL DEL CALENDARIO (ventana emergente)
+------------------------------- */
+    .calendar-modal {
+        display: none; /* Oculto por defecto */
+        position: fixed; /* Se queda fijo en la pantalla al hacer scroll */
+        top: 50%; /* Lo centramos verticalmente */
+        left: 50%; /* Lo centramos horizontalmente */
+        transform: translate(-50%, -50%); /* Ajuste fino para centrar en X y Y */
+        background-color: #1e1e1e; /* Fondo oscuro estilo moderno */
+        color: #fff; /* Texto blanco */
+        border-radius: 12px; /* Bordes redondeados */
+        padding: 20px; /* Espaciado interno */
+        width: 320px; /* Ancho fijo del calendario */
+        z-index: 1000; /* Encima de otros elementos */
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Sombra para efecto flotante */
+        font-family: Arial, sans-serif; /* Fuente estándar */
+    }
+/* ------------------------------
+   CABECERA DEL CALENDARIO (mes, año, botones de navegación)
+------------------------------- */
+    .calendar-header {
+        display: flex; /* Coloca elementos en fila */
+        justify-content: space-between; /* Espaciado entre elementos (prev, mes/año, next) */
+        align-items: center; /* Centra verticalmente */
+        margin-bottom: 15px; /* Separación hacia el cuerpo del calendario */
+        font-size: 16px; /* Tamaño de texto */
+        font-weight: bold; /* Negrita */
+    }
+/* Botones de navegación (flechas prev/next) */
+    .calendar-header button {
+        background: none; /* Sin fondo */
+        border: none; /* Sin borde */
+        color: #fff; /* Color blanco */
+        font-size: 20px; /* Tamaño más grande para destacar */
+        cursor: pointer; /* Cursor de mano al pasar */
+    }
+/* ------------------------------
+   CUERPO DEL CALENDARIO (días del mes)
+------------------------------- */
+    .calendar-body {
+        display: grid; /* Usamos cuadrícula */
+        grid-template-columns: repeat(7, 1fr); /* 7 columnas iguales (días de la semana) */
+        gap: 4px; /* Espacio entre celdas */
+    }
+/* Estilo general para cada celda del calendario */
+    .calendar-body div {
+        text-align: center; /* Centra el número del día */
+        padding: 8px 0; /* Espaciado interno */
+        border-radius: 6px; /* Bordes redondeados */
+    }
+/* Encabezado de días (D, L, M, X, J, V, S) */
+    .day-header {
+        font-weight: bold; /* Negrita */
+        color: #aaa; /* Gris claro para diferenciar */
+    }
+/* Días normales del mes */
+    .day {
+        cursor: pointer; /* Cursor de mano */
+        transition: 0.2s; /* Animación suave en hover */
+    }
+/* Día actual resaltado */
+    .day.today {
+        background-color: #4e9af1; /* Azul brillante */
+        color: #fff; /* Texto blanco */
+        font-weight: bold; /* Negrita */
+        border-radius: 50%; /* Forma circular */
+    }
+/* Efecto hover sobre los días */
+    .day:hover {
+        background-color: #555; /* Fondo gris oscuro */
+        border-radius: 50%; /* Forma circular */
+    }
+/* ------------------------------
+   BOTÓN DE CIERRE (✖ dentro del modal)
+------------------------------- */
+    .close-btn {
+        background: none; /* Sin fondo */
+        border: none; /* Sin borde */
+        color: #fff; /* Blanco para resaltar sobre fondo oscuro */
+        font-size: 18px; /* Un poco más grande que el texto normal */
+        cursor: pointer; /* Cursor de mano */
+        margin-left: 10px; /* Espacio a la izquierda para separar */
+    }

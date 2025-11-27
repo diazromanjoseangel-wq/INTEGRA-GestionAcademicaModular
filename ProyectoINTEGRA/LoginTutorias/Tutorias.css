@@ -1,0 +1,238 @@
+/*--RESETEO-------------------------------------------------------------------------------------------------------*/
+/* --------------------------
+RESETEO GENERAL Y BASE
+-------------------------- */
+    body {
+        margin: 0;                          /* Elimina márgenes por defecto del navegador */
+        font-family: Arial, sans-serif;     /* Fuente principal del sitio */
+        background: #fff;                 /* Fondo blanco */
+        color: #000;                      /* Texto en color negro */
+        overflow: hidden;                   /* Evita que aparezca scroll en la página */
+        height: 100vh;                      /* Ocupa el 100% de la altura de la ventana */
+        display: flex;                      /* Convierte el body en un contenedor flexible */
+        flex-direction: column;             /* Organiza los elementos hijos en columna */
+    }
+
+/*--ENCABEZADO----------------------------------------------------------------------------------------------------*/
+/* --------------------------
+ENCABEZADO COLOR AZUL
+-------------------------- */
+    header {
+        background-color: #002f6c;       /* Azul institucional de fondo */
+        color: white;                    /* Texto en blanco */
+        padding: 30px 10px;                /* Espaciado interno (vertical/horizontal) */
+        text-align: center;                /* Centra el texto en horizontal */
+    }
+/* --------------------------
+ENCABEZADO COLOR VERDE
+-------------------------- */
+    .header-verde {
+        background-color: #007a33;      /* Verde institucional */
+        color: white;                   /* Texto en blanco */
+        padding: 30px 10px;               /* Espaciado interno (vertical/horizontal) */
+        text-align: center;               /* Centra el texto en horizontal */
+    }
+/* --------------------------
+LÍNEA DECORATIVA VERDE
+-------------------------- */
+    .linea-verde {
+        height: 25px;                      /* Grosor de la franja */
+        background: linear-gradient(
+            to bottom,
+            white 0%, white 50%,      /* Mitad superior blanca */
+            green 50%, green 100%     /* Mitad inferior verde */
+        );
+    }
+/* --------------------------
+LÍNEA DECORATIVA AZUL
+-------------------------- */
+    .linea-azul {
+        height: 25px;                          /* Grosor de la franja */
+        background: linear-gradient(
+            to bottom,
+            white 0%, white 50%,           /* Mitad superior blanca */
+            #002f6c 50%, #002f6c 100%      /* Mitad inferior azul institucional */
+        );
+    }
+/* --------------------------
+TEXTO DE ENCABEZADO
+--------------------------*/
+    .bienvenidos {
+        font-size: 20px;        /* Tamaño de fuente fijo para mantener consistencia visual */
+    }
+    .integra {
+        font-size: 36px;        /* Más grande que los demás textos para destacarlo */
+        font-weight: bold;      /* Negrita para resaltar aún más el texto */
+        position: relative;     /* Permite ajustar la posición respecto a su ubicación original */
+        top: 5px;               /* Desplaza ligeramente el texto hacia abajo para separarlo visualmente */
+    }
+    .sub {
+        font-size: 20px;        /* Tamaño de fuente fijo para mantener consistencia visual */
+    }
+/*--BASE----------------------------------------------------------------------------------------------------------*/
+/* --------------------------
+CONTENEDOR PRINCIPAL: Acomoda todos los niveles (logoTec, logoTecnm)
+-------------------------- */
+    .contenedor {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; /* en vez de space-between */
+        align-items: center;
+        padding-top: 40px;           /* baja todo el bloque de login */
+    }
+/* --------------------------
+NIVELES (estructura por filas flexibles)
+-------------------------- */
+    .nivel {
+        width: 100%;        /* Cada nivel ocupa todo el ancho disponible */
+        display: flex;      /* Flexbox para alinear contenido */
+    }
+/* --------------------------
+LOGOS IZQUIERDO Y DERECHO
+-------------------------- */
+    .logo-izq {
+        justify-content: flex-start;    /* Alinea el logo al inicio (izquierda) */
+    }
+    .logo-izq img{
+        width: 95px;                    /* Tamaño fijo del logo */
+        height: auto;                   /* Mantiene proporción original */
+    }
+    .logo-der img {
+        width: 90px;                    /* Tamaño fijo del logo */
+        height: auto;                   /* Mantiene proporción original */
+    }
+    .logo-der {
+        justify-content: flex-end;      /* Alinea el logo al final (derecha) */
+    }
+/*--LOGIN---------------------------------------------------------------------------------------------------------*/
+/* --------------------------
+CAJA DE LOGIN COMPACTA
+-------------------------- */
+    .login-box {
+        background: #e0e0e0;
+        padding: 10px;
+        border-radius: 8px;
+        width: 320px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.2);
+        margin: 15px auto;  /* ↑ margen superior aumentado */
+        text-align: center;
+    }
+/* --------------------------
+TÍTULO PRINCIPAL DE LA CAJA
+-------------------------- */
+    .login-box h3 {
+        background: white;        /* Fondo blanco detrás del texto para destacarlo */
+        font-size: 20px;            /* Tamaño del texto */
+        font-weight: bold;          /* Negrita */
+        margin-bottom: 4px;         /* Separación mínima respecto al subtítulo */
+        padding: 4px;               /* Espaciado interno del recuadro del título */
+        border-radius: 4px;         /* Bordes redondeados del recuadro */
+    }
+/* --------------------------
+SUBTÍTULO DE LA CAJA
+-------------------------- */
+    .login-box .sub {
+        font-size: 14px;          /* Texto más pequeño */
+        margin-bottom: 10px;      /* Separación inferior antes del formulario */
+        font-weight: bold;        /* Negrita */
+    }
+/* --------------------------
+FORMULARIO
+-------------------------- */
+    .login-box form {
+        display: flex;            /* Activa flexbox */
+        flex-direction: column;   /* Ordena los elementos en columna */
+        text-align: left;         /* Alinea etiquetas e inputs a la izquierda */
+    }
+/* --------------------------
+ETIQUETAS (Labels)
+-------------------------- */
+    .login-box label {
+        margin-top: 8px;          /* Espaciado superior reducido (más compacto) */
+        font-weight: bold;        /* Texto en negrita */
+        font-size: 14px;          /* Tamaño de fuente consistente */
+    }
+/* --------------------------
+CAMPOS DE TEXTO (Inputs)
+-------------------------- */
+    .login-box input {
+        margin-top: 4px;            /* Espacio mínimo encima del input */
+        padding: 10px;              /* Espaciado interno para que no se vea apretado */
+        border: 1px solid #ccc;   /* Borde gris claro */
+        border-radius: 5px;         /* Bordes redondeados */
+        font-size: 14px;            /* Tamaño de texto */
+    }
+/* Efecto al enfocar (focus) un campo */
+    .login-box input:focus {
+        outline: none;                                        /* Elimina borde azul por defecto del navegador */
+        border-color: #4c7dfc;                              /* Cambia el borde a azul */
+        box-shadow: 0 0 0 2px rgba(76, 125, 252, 0.2);      /* Resalta con un halo azul translúcido */
+    }
+/* --------------------------
+BOTÓN DE LOGIN
+-------------------------- */
+    .login {
+        margin-top: 10px;                   /* Espacio superior respecto al último input */
+        background: #002f6c;              /* Azul institucional */
+        color: white;                     /* Texto en blanco */
+        border: none;                       /* Sin borde */
+        padding: 10px;                      /* Espaciado interno compacto */
+        border-radius: 5px;                 /* Bordes redondeados */
+        cursor: pointer;                    /* Cambia el cursor a "manita" */
+        font-weight: bold;                  /* Texto en negrita */
+        font-size: 15px;                    /* Tamaño del texto */
+        transition: background 0.3s ease;   /* Animación suave al cambiar de color */
+    }
+    .login:hover {                  /* Efecto hover (cuando pasas el mouse sobre el botón) */
+        background: #0055aa;      /* Azul más claro para dar feedback visual */
+    }
+/* --------------------------
+BOTONES DE ROL (TUTOR/ALUMNO)
+-------------------------- */
+    .buttons a {
+        padding: 7px 10px;                  /* Espaciado interno (vertical/horizontal) */
+        border-radius: 5px;                 /* Bordes redondeados */
+        text-decoration: none;              /* Quita el subrayado de los enlaces */
+        font-weight: bold;                  /* Texto en negrita */
+        transition: background 0.2s ease;   /* Transición suave al cambiar el color de fondo */
+        display: inline-block;              /* Hace que el enlace se comporte como un botón */
+    }
+/* --------------------------
+BOTÓN TUTOR (color azul)
+-------------------------- */
+    .buttons .tutor {
+        background: #002f6c;   /* Azul institucional de fondo */
+        color: white;          /* Texto en blanco */
+    }
+    .buttons .tutor:hover {
+        background: #0055aa;   /* Azul más claro al pasar el cursor */
+    }
+/* --------------------------
+BOTÓN ALUMNO (color rojo)
+-------------------------- */
+    .buttons .alumno {
+        background: #b30000;   /* Rojo base de fondo */
+        color: white;          /* Texto en blanco */
+    }
+    .buttons .alumno:hover {
+        background: #e60000;   /* Rojo más claro al pasar el cursor */
+    }
+/* --------------------------
+BOTÓN SALIDA
+-------------------------- */  
+    .salida {
+    position: fixed;         /* Siempre visible */
+    bottom: 35px;            /* Separación del borde inferior */
+    right: 30px;             /* Separación del borde derecho */
+    display: inline-block;
+    }
+    .salida img {
+        width: 60px;             /* Tamaño del icono */
+        height: 60px;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+    }
+    .salida img:hover {
+        transform: scale(1.1);   /* Efecto al pasar el mouse */
+    }

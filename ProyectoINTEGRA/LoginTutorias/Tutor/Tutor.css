@@ -1,0 +1,889 @@
+/*--RESETEO------------------------------------------------------------------------------------------------------*/
+    body {
+        margin: 0;                          /* Elimina márgenes por defecto del navegador */
+        font-family: Arial, sans-serif;     /* Fuente principal del sitio */
+        background: #fff;                 /* Fondo blanco */
+        color: #000;                      /* Texto en color negro */
+        overflow: hidden;                   /* Evita que aparezca scroll en la página */
+        height: 100vh;                      /* Ocupa el 100% de la altura de la ventana */
+        display: flex;                      /* Convierte el body en un contenedor flexible */
+        flex-direction: column;             /* Organiza los elementos hijos en columna */
+    }
+
+/*--ENCABEZADO---------------------------------------------------------------------------------------------------*/
+/* ===========================
+   ESTILOS PARA EL ENCABEZADO
+   =========================== */
+header {
+    background-color: #ffffff;         /* Fondo blanco */
+    color: #002f6c;                    /* Azul institucional para el texto */
+    display: flex;                     /* Distribuye contenido en línea (flexbox) */
+    justify-content: space-between;    /* Coloca logos a los extremos (izq-der) */
+    align-items: center;               /* Centra verticalmente los elementos */
+    padding: 15px 25px;                /* Espaciado interno */
+    margin-bottom: 0px;                /* Sin margen inferior */
+}
+
+/* ===========================
+   ESTILOS PARA LOS LOGOS
+   =========================== */
+header img {
+    height: 70px;   /* Altura fija */
+    width: auto;    /* Mantiene la proporción original */
+}
+
+/* Logo izquierdo: separación del título */
+.logo-izq {
+    margin-right: 30px;
+}
+
+/* Logo derecho: separación del título */
+.logo-der {
+    margin-left: 20px;
+}
+
+/* ===========================
+   TEXTO CENTRAL (h2 y h3)
+   =========================== */
+.titulo {
+    display: flex;
+    flex-direction: column; /* Organiza h2 arriba y h3 abajo */
+    flex: 1;                /* Ocupa todo el espacio central */
+}
+
+/* h2: título superior alineado a la izquierda */
+.titulo h2 {
+    font-size: 35px;       /* Tamaño de fuente grande */
+    margin: 0;             /* Sin margen externo extra */
+    text-align: left;      /* Alineación izquierda */
+    margin-left: 10px;     /* Espacio desde el borde izquierdo */
+}
+
+/* h3: subtítulo inferior alineado a la derecha */
+.titulo h3 {
+    font-size: 25px;       /* Tamaño de fuente un poco menor */
+    margin: 0;             /* Sin margen externo extra */
+    text-align: right;     /* Alineación derecha */
+    margin-right: 10px;    /* Espacio desde el borde derecho */
+}
+
+
+
+/* ===========================
+   LÍNEAS DECORATIVAS SUPERIORES
+   =========================== */
+
+/* Línea verde en la parte superior */
+.linea-verde {
+    height: 15px;                /* Grosor de la línea */
+    margin-bottom: 0px;          /* Sin separación inferior */
+    background-color: #00703c;   /* Verde institucional */
+}   
+
+/* Línea azul en la parte superior */
+.linea-azul {
+    height: 15px;                /* Grosor de la línea */
+    margin-bottom: 5px;          /* Pequeño espacio inferior */
+    background-color: #002f6c;   /* Azul institucional */
+}  
+
+/* ===========================
+   CONTENEDOR PRINCIPAL
+   =========================== */
+.contenedor {
+    display: flex;                /* Layout flexible horizontal */
+    height: 100vh;                /* Ocupa toda la altura de la pantalla */
+    font-family: Arial, sans-serif; /* Fuente del contenido */
+}
+
+/* ===========================
+   BARRA LATERAL (MENÚ)
+   =========================== */
+#Listado {
+    width: 200px;                 /* Ancho fijo de la barra */
+    background-color: #bdb7b7;    /* Fondo gris claro */
+    display: flex;
+    flex-direction: column;       /* Elementos en columna */
+    align-items: flex-start;      /* Alineados al inicio (izquierda) */
+    padding-top: 10px;            /* Separación superior */
+    position: relative;           /* Referencia para posicionar elementos internos */
+}
+
+/* Estilos para los enlaces del menú */
+#Listado a {
+    display: flex;                /* Ícono + texto en línea */
+    align-items: center;          /* Centra verticalmente ícono y texto */
+    gap: 10px;                    /* Espacio entre ícono y texto */
+    padding: 12px 15px;           /* Espaciado interno */
+    text-decoration: none;        /* Quita subrayado */
+    color: #000;                  /* Texto negro */
+    font-weight: bold;            /* Texto en negritas */
+    text-transform: uppercase;    /* Texto en mayúsculas */
+    font-size: 14px;              /* Tamaño de fuente */
+}
+
+/* Iconos del menú lateral */
+#Listado img {
+    width: 20px;                  /* Tamaño fijo de ancho */
+    height: 20px;                 /* Tamaño fijo de alto */
+}
+
+/* ===========================
+   LÍNEAS DECORATIVAS VERTICALES
+   =========================== */
+
+/* Línea azul vertical */
+.linea-azul-horizontal {
+    width: 10px;                  /* Grosor de la línea */
+    height: 400px;                /* Altura */
+    background-color: #002f6c;    /* Azul institucional */
+    position: absolute;           /* Posicionada respecto al contenedor */
+    top: 100px;                   /* Distancia desde arriba */
+    left: 200px;                  /* Ubicación horizontal */
+    border-bottom-left-radius: 10px;   /* Bordes inferiores redondeados */
+    border-bottom-right-radius: 10px;
+}
+
+/* Línea verde vertical */
+.linea-verde-horizontal {
+    width: 10px;                  /* Grosor de la línea */
+    height: 400px;                /* Altura */
+    background-color: #00703c;    /* Verde institucional */
+    position: absolute;
+    top: 230px;                   /* Distancia desde arriba */
+    left: 215px;                  /* Ubicación horizontal */
+    border-top-left-radius: 10px; /* Bordes superiores redondeados */
+    border-top-right-radius: 10px;
+}
+
+/* ===========================
+   BOTÓN/ICONO DE SALIDA (SUPERIOR DERECHA)
+   =========================== */
+.top-icon {
+    position: fixed;              /* Siempre visible en pantalla */
+    top: 145px;                   /* Ubicación desde arriba */
+    right: 30px;                  /* Separación desde el borde derecho */
+    width: 55px;                  /* Ancho del contenedor */
+    height: 55px;                 /* Alto del contenedor */
+    display: block;               /* Se comporta como bloque */
+    z-index: 1000;                /* Encima de otros elementos */
+}
+
+/* Ajustes de la imagen dentro del ícono */
+.top-icon img {
+    width: 100%;                  /* Ocupa todo el ancho del contenedor */
+    height: 100%;                 /* Ocupa todo el alto del contenedor */
+    object-fit: contain;          /* Mantiene proporciones originales */
+}
+
+/*======================
+    404 page
+=======================*/
+
+    .page_404 {
+        background: transparent;   /* no tapará nada */
+        position: absolute;        /* fuera del flujo normal */
+        z-index: 0;                /* muy bajo, debajo de todo */
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .four_zero_four_bg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        height: auto;
+    }
+    .four_zero_four_bg img {
+        width: 550px;
+        height: 400px;
+        object-fit: cover;
+        position: relative;
+        top: -50px;
+        left: -100px;  /* lo mueve a la derecha */
+    }
+    .contant_box_404 p {
+        font-size: 40px;
+        font-weight: bold;
+        color: #000;
+        margin: 0;
+        text-align: center;
+        position: relative;
+        top: -150px;  /* lo sube */
+        left: -100px;  /* lo mueve a la derecha */
+    }
+
+/* ===========================
+   SECCIÓN: USUARIOS
+   =========================== */
+
+/* Contenedor de los botones principales */
+.botones-container {
+    display: flex;            /* Alinea los elementos en fila */
+    gap: 20px;                /* Espacio entre los botones */
+    justify-content: center;  /* Centra los botones horizontalmente */
+    margin-top: 20px;         /* Separación desde arriba */
+    margin-left: 30px;        /* Desplaza todo el grupo 30px a la derecha */
+}
+
+/* Contenedor de cada dropdown individual */
+.dropdown {
+    position: relative;       /* Base para posicionar el menú desplegable */
+    display: inline-block;    /* Cada dropdown se comporta como bloque en línea */
+    left: 30px;               /* Desplaza cada dropdown 30px a la derecha */
+}
+
+/* Botón principal del dropdown */
+.dropdown-btn {
+    background: #bfbaba;                      /* Fondo gris claro */
+    border: 2px solid black;                  /* Borde negro */
+    border-radius: 20px;                      /* Bordes redondeados */
+    padding: 10px 20px;                       /* Espaciado interno */
+    font-size: 16px;                          /* Tamaño de fuente */
+    font-weight: bold;                        /* Texto en negritas */
+    display: flex;                            /* Ícono + texto en fila */
+    align-items: center;                      /* Centra ícono y texto */
+    gap: 10px;                                /* Espacio entre ícono y texto */
+    cursor: pointer;                          /* Cursor tipo mano al pasar */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);  /* Sombra para efecto elevado */
+}
+
+/* Ícono (flecha) dentro del botón */
+.dropdown-btn .icono {
+    width: 20px;                              /* Tamaño del ícono */
+    height: 20px;
+    transition: transform 0.3s ease;          /* Suaviza la animación de rotación */
+}
+
+/* Rotación de la flecha al abrir el menú */
+.dropdown-btn .icono.rotate {
+    transform: rotate(180deg);                /* Gira 180° */
+}
+
+/* Menú desplegable oculto por defecto */
+.dropdown-content {
+    display: none;                            /* No visible inicialmente */
+    position: absolute;                       /* Posicionado relativo al dropdown */
+    background: #f1f1f1;                      /* Fondo gris claro */
+    border: 1px solid #ccc;                   /* Borde gris */
+    min-width: 160px;                         /* Ancho mínimo */
+    border-radius: 8px;                       /* Bordes redondeados */
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);  /* Sombra flotante */
+    margin-top: 5px;                          /* Separación desde el botón */
+    z-index: 100;                             /* Se asegura de estar encima */
+}
+
+/* Clase "show" → activa el menú */
+.dropdown-content.show {
+    display: block;
+}
+
+/* Opciones dentro del menú desplegable */
+.dropdown-content a {
+    display: block;                           /* Cada opción ocupa toda la fila */
+    padding: 10px;                            /* Espaciado interno */
+    color: black;                             /* Texto negro */
+    text-decoration: none;                    /* Quita subrayado */
+    font-size: 14px;                          /* Tamaño de fuente */
+}
+
+/* Efecto hover en las opciones */
+.dropdown-content a:hover {
+    background: #ddd;                         /* Fondo gris más oscuro */
+}
+
+/* --------------------------
+   CALENDARIO
+-------------------------- */
+/* ======== CONTENEDOR PRINCIPAL ======== */
+#ContenidoPrincipal {
+    display: flex;
+    justify-content: center;   /* Centra horizontalmente */
+    align-items: flex-start;   /* Se alinea arriba dentro del contenedor */
+    min-height: calc(100vh - 120px); /* Ajusta la altura para dejar espacio al header */
+    margin-top: -10px;          /* 🔹 Desplaza todo hacia abajo */
+    background-color: #f4f6f8; /* Opcional, si quieres fondo */
+}
+
+/* ======== MAIN CONTAINER ======== */
+#MainContainer {
+    display: flex;
+    justify-content: center;  /* Centra ambos elementos */
+    align-items: flex-start;
+    gap: 40px;               /* Espacio entre calendario y formulario */
+    margin-top: 20px;
+}
+
+/* ======== CALENDARIO ======== */
+#calendario {
+    background: #fff;
+    padding: 20px;
+    width: 300px;   /* 🔹 Tamaño normal */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+/* Header calendario */
+#calendario .calendario-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#calendario select {
+    padding: 2px 4px;
+    margin: 0 2px;
+    font-size: 10px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    justify-items: center;
+    margin-bottom: 8px;
+}
+
+.dia-num {
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.dia-num:hover { background: #e0e0e0; }
+.dia-num.selected { background: #007bff; color: white; }
+.dia-num.hoy { border: 2px solid red; border-radius: 50%; }
+
+/* ======== FORMULARIO ======== */
+#Formulario {
+    background: #fff;
+    padding: 20px;
+    width: 300px;   /* 🔹 Igual que el calendario */
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+}
+
+#Formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Campos internos del formulario */
+#Formulario form,
+#Formulario input,
+#Formulario select,
+#Formulario textarea,
+#Formulario button,
+#Formulario #material {
+    width: 100%;          /* Ocupa todo el ancho del formulario */
+    box-sizing: border-box;
+}
+
+#material {
+    min-height: 120px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+/* Ajuste visual de etiquetas y botones */
+#Formulario label, 
+#Formulario input, 
+#Formulario button {
+    font-size: 14px;
+}
+
+.agendar {
+    background: #00703c;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 10px;
+}
+
+.agendar:hover {
+    background: #005a2c;
+}
+
+
+
+/* --------------------------
+   REPORTES
+-------------------------- */
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        margin-left: 100px; /* Desplaza todo hacia la derecha */
+        margin-top: 50px;    /* desplaza hacia abajo */
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        width: 400px;
+    }
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    label {
+        margin-bottom: 2px;
+    }
+/* Campos */
+    .input-text,
+    .input-textarea,
+    .input-file-display {
+        background-color: #e0e0e0;
+        border: none;
+        border-radius: 8px;
+        padding: 10px;
+        font-size: 14px;
+        width: 100%;
+    }
+    .input-textarea {
+        height: 100px;
+        resize: none;
+    }
+/* Subir archivo */
+    .file-upload {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+/* Ocultar input file real */
+    .hidden-file {
+        display: none;
+    }
+/* Barra de solo lectura */
+    .input-file-display {
+        flex: 1;
+        cursor: default;
+    }
+/* Imagen como botón */
+    .file-label {
+        cursor: pointer;
+    }
+    .file-icon {
+        width: 35px;
+        height: 35px;
+    }
+/* Botón */
+    .form-actions {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .btn-submit {
+        background-color: #008c45;
+        color: white;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 12px 25px;
+        border: 2px solid black;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+    .btn-submit:hover {
+        background-color: #006f37;
+    }
+/* ===========================
+    SECCIÓN: REPORTES
+=========================== */
+
+/* Contenedor del formulario de reportes */
+.form-container {
+    display: flex;                 /* Organiza en fila/columna flexible */
+    justify-content: center;       /* Centra horizontalmente */
+    align-items: center;           /* Centra verticalmente */
+    height: 100%;                  /* Ocupa toda la altura disponible */
+    width: 100%;                   /* Ocupa todo el ancho disponible */
+    margin-left: 100px;            /* Desplaza todo hacia la derecha */
+    margin-top: 50px;              /* Desplaza hacia abajo */
+}
+
+/* Estilos base del formulario */
+form {
+    display: flex;
+    flex-direction: column;        /* Elementos en columna */
+    gap: 2  0px;                     /* Espacio entre campos */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    width: 400px;                  /* Ancho fijo del formulario */
+}
+
+/* Grupo de campo: etiqueta + input */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;                      /* Espacio entre etiqueta e input */
+}
+
+/* Etiquetas */
+label {
+    margin-bottom: 2px;
+}
+
+/* ===========================
+   CAMPOS DE ENTRADA
+   =========================== */
+.input-text,
+.input-textarea,
+.input-file-display {
+    background-color: #e0e0e0;     /* Fondo gris claro */
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 14px;
+    width: 100%;                   /* Ocupar todo el ancho disponible */
+}
+
+/* Área de texto */
+.input-textarea {
+    height: 100px;                 /* Altura fija */
+    resize: none;                  /* Desactiva el redimensionado manual */
+}
+
+/* ===========================
+   SUBIR ARCHIVO
+   =========================== */
+
+/* Contenedor del campo de archivo */
+.file-upload {
+    display: flex;
+    align-items: center;           /* Alinea verticalmente */
+    gap: 10px;                     /* Espacio entre elementos */
+}
+
+/* Input file real (oculto) */
+.hidden-file {
+    display: none;
+}
+
+/* Barra que muestra el nombre del archivo (solo lectura) */
+.input-file-display {
+    flex: 1;                       /* Ocupa el espacio disponible */
+    cursor: default;               /* No es editable */
+}
+
+/* Imagen que actúa como botón de carga */
+.file-label {
+    cursor: pointer;
+}
+
+.file-icon {
+    width: 35px;
+    height: 35px;
+}
+
+/* ===========================
+   BOTÓN DE ENVÍO
+   =========================== */
+
+/* Contenedor de acciones */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;     /* Botón alineado a la derecha */
+}
+
+/* Botón enviar */
+.btn-submit {
+    background-color: #008c45;     /* Verde principal */
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 12px 25px;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Hover del botón */
+.btn-submit:hover {
+    background-color: #006f37;     /* Verde más oscuro */
+}
+
+/* --------------------------
+   ACTIVIDADES
+-------------------------- */
+
+/* --------------------------
+   ACTUALIZACION + estilo para ambas tablas
+-------------------------- */
+/* BOTÓN GUARDAR CAMBIOS (SIN FLECHA) - SIEMPRE VISIBLE */
+.cambio-periodo-btn {
+    background: #28a745;
+    border: 2px solid #1e7e34;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    color: white;
+    transition: background 0.3s ease;
+    margin-left: 20px;
+}
+
+.cambio-periodo-btn:hover {
+    background: #218838;
+}
+
+.cambio-periodo-btn:disabled {
+    background: #6c757d;
+    border-color: #5a6268;
+    cursor: not-allowed;
+}
+
+/* DROPDOWN DE PERIODO EN CADA FILA */
+.periodo-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.periodo-flecha {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.3s ease;
+}
+
+.periodo-flecha.rotate {
+    transform: rotate(180deg);
+}
+
+.periodo-opciones {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 100;
+    min-width: 120px;
+}
+
+.periodo-opciones.show {
+    display: block;
+}
+
+.periodo-opciones a {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    font-size: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.periodo-opciones a:hover {
+    background: #f5f5f5;
+}
+
+.periodo-opciones a:last-child {
+    border-bottom: none;
+}
+
+/* ===== ESTILOS PARA TABLA DE ALUMNOS ===== */
+.contenedor-tabla {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+    margin-left: 80px; /* MOVIDO MÁS A LA DERECHA */
+}
+
+.tabla-scroll-container {
+    width: 85%; /* MÁS REDUCIDO EL ANCHO */
+    max-width: 1500px; /* MÁS REDUCIDO EL MÁXIMO */
+    max-height: 450px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tabla-scroll-container table {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+/* Personalizar scrollbar */
+.tabla-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tabla-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.tabla-scroll-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.tabla-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.tabla-alumnos {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.tabla-alumnos th, .tabla-alumnos td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.tabla-alumnos th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.tabla-alumnos tr:hover {
+    background-color: #f5f5f5;
+}
+
+.sin-datos {
+    padding: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    text-align: center;
+}
+
+.estado-aprobado {
+    color: green;
+    font-weight: bold;
+}
+
+.estado-reprobado {
+    color: red;
+    font-weight: bold;
+}
+/* --------------------------
+   CURSO
+-------------------------- */
+/* ===== BARRA DE BÚSQUEDA ADAPTADA ===== */
+
+/* Contenedor general dentro del flex */
+.busqueda-container {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid #2c3e50;
+    border-radius: 25px;
+    padding: 10px 18px;
+    max-width: 350px;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    margin-left: auto;         /* SE ALINEA A LA DERECHA DEL FLEX */
+}
+
+/* Efecto al hacer focus */
+.busqueda-container:focus-within {
+    border-color: #3498db;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Icono */
+.search-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.busqueda-container:focus-within .search-icon {
+    opacity: 1;
+}
+
+/* Input */
+#searchInput {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    background: transparent;
+    color: #2c3e50;
+    font-family: Arial, sans-serif;
+}
+
+#searchInput::placeholder {
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+#searchInput:focus {
+    color: #2c3e50;
+}
+
+/* Hover */
+.busqueda-container:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Para cuando hay búsqueda activa */
+.busqueda-activa {
+    border-color: #27ae60 !important;
+}
+
+/* Contador (si lo usas) */
+.contador-resultados {
+    font-size: 12px;
+    color: #7f8c8d;
+    margin-left: 10px;
+    font-style: italic;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .busqueda-container {
+        max-width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}

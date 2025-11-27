@@ -1,0 +1,120 @@
+/*--RESETEO-------------------------------------------------------------------------------------------------------*/
+/* --------------------------
+RESETEO GENERAL Y BASE
+-------------------------- */
+    body {
+        margin: 0;                          /* Elimina márgenes por defecto del navegador */
+        font-family: Arial, sans-serif;     /* Fuente principal del sitio */
+        background: #fff;                 /* Fondo blanco */
+        color: #000;                      /* Texto en color negro */
+        overflow: hidden;                   /* Evita que aparezca scroll en la página */
+        height: 100vh;                      /* Ocupa el 100% de la altura de la ventana */
+        display: flex;                      /* Convierte el body en un contenedor flexible */
+        flex-direction: column;             /* Organiza los elementos hijos en columna */
+    }
+
+/*--ENCABEZADO----------------------------------------------------------------------------------------------------*/
+/* --------------------------
+ENCABEZADO
+-------------------------- */
+    header {
+        background-color: #002f6c;       /* Azul institucional de fondo */
+        color: white;                    /* Texto en blanco */
+        padding: 30px 10px;                /* Espaciado interno (vertical/horizontal) */
+        text-align: center;                /* Centra el texto en horizontal */
+    }
+/* --------------------------
+LÍNEA DECORATIVA VERDE
+-------------------------- */
+    .linea-verde {
+        height: 25px;                      /* Grosor de la franja */
+        background: linear-gradient(
+            to bottom,
+            white 0%, white 50%,      /* Mitad superior blanca */
+            green 50%, green 100%     /* Mitad inferior verde */
+        );
+    }
+/* --------------------------
+TEXTO DE ENCABEZADO
+--------------------------*/
+    .bienvenidos {
+        font-size: 20px;        /* Tamaño de fuente fijo para mantener consistencia visual */
+    }
+    .integra {
+        font-size: 36px;        /* Más grande que los demás textos para destacarlo */
+        font-weight: bold;      /* Negrita para resaltar aún más el texto */
+        position: relative;     /* Permite ajustar la posición respecto a su ubicación original */
+        top: 5px;               /* Desplaza ligeramente el texto hacia abajo para separarlo visualmente */
+    }
+    .sub {
+        font-size: 20px;        /* Tamaño de fuente fijo para mantener consistencia visual */
+    }
+/*--BASE----------------------------------------------------------------------------------------------------------*/
+/* --------------------------
+CONTENEDOR PRINCIPAL
+Acomoda todos los niveles (logoTec, logoTecnm)
+-------------------------- */
+    .contenedor {
+        flex: 1;                        /* Ocupa todo el espacio disponible debajo del header */
+        display: flex;                  /* Contenedor flexible */
+        flex-direction: column;         /* Organiza niveles en columna */
+        justify-content: space-between; /* Distribuye los niveles con espacio entre ellos */
+        padding: 60px 60px;             /* Espaciado interno */
+    }
+/* --------------------------
+NIVELES (estructura por filas flexibles)
+-------------------------- */
+    .nivel {
+        width: 100%;   /* Cada nivel ocupa todo el ancho disponible */
+        display: flex; /* Flexbox para alinear contenido */
+    }
+/* --------------------------
+LOGOS IZQUIERDO Y DERECHO
+-------------------------- */
+    .logo-izq {
+        justify-content: flex-start; /* Alinea el logo al inicio (izquierda) */
+    }
+    .logo-izq img{
+        width: 95px;  /* Tamaño fijo del logo */
+        height: auto; /* Mantiene proporción original */
+    }
+    .logo-der img {
+        width: 90px;  /* Tamaño fijo del logo */
+        height: auto; /* Mantiene proporción original */
+    }
+    .logo-der {
+        justify-content: flex-end; /* Alinea el logo al final (derecha) */
+    }
+/* --------------------------
+MÓDULOS CENTRALES
+(aunque aquí no los estás usando en este HTML, están definidos)
+-------------------------- */
+    .modulos {
+        justify-content: center; /* Centra horizontalmente los módulos */
+        gap: 50px;               /* Espacio entre módulos */
+    }
+    .modulo {
+        text-align: center;  /* Centra contenido dentro del módulo */
+        max-width: 160px;    /* Ancho máximo del módulo */
+    }
+    .modulo img {
+        width: 70px;         /* Tamaño de icono */
+        height: auto;        /* Mantiene proporción */
+        margin-bottom: 8px;  /* Espacio debajo del icono */
+    }
+    .modulo h2 {
+        font-size: 15px;     /* Tamaño de texto */
+        line-height: 1.3;    /* Espaciado de línea */
+    }
+/* --------------------------
+EFECTOS EN LOS MÓDULOS
+-------------------------- */
+    .modulo a {
+        text-decoration: none;            /* Quita subrayado */
+        color: inherit;                   /* Hereda color del texto padre */
+        display: inline-block;            /* Se comporta como bloque en línea */
+        transition: transform 0.2s ease;  /* Animación suave al transformar */
+    }
+    .modulo a:hover {
+        transform: scale(1.05);           /* Efecto de "zoom" al pasar el mouse */
+    }

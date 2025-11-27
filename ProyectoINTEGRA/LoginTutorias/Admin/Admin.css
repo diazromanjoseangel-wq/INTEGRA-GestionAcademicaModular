@@ -1,0 +1,665 @@
+/*--RESETEO------------------------------------------------------------------------------------------------------*/
+    body {
+        margin: 0;                          /* Elimina márgenes por defecto del navegador */
+        font-family: Arial, sans-serif;     /* Fuente principal del sitio */
+        background: #fff;                 /* Fondo blanco */
+        color: #000;                      /* Texto en color negro */
+        overflow: hidden;                   /* Evita que aparezca scroll en la página */
+        height: 100vh;                      /* Ocupa el 100% de la altura de la ventana */
+        display: flex;                      /* Convierte el body en un contenedor flexible */
+        flex-direction: column;             /* Organiza los elementos hijos en columna */
+    }
+
+/*--ENCABEZADO---------------------------------------------------------------------------------------------------*/
+    header {
+        background-color: #ffffff;
+        color: #002f6c;
+        display: flex;
+        justify-content: space-between; /* logos a los extremos */
+        align-items: center;            /* centra verticalmente */
+        padding: 15px 25px;
+        margin-bottom: 0px;
+    }
+/* Logos */
+    header img {
+        height: 70px; 
+        width: auto;
+    }
+    .logo-izq {
+        margin-right: 30px;
+    }
+    .logo-der {
+        margin-left: 20px;
+    }
+/* Texto central */
+    .titulo {
+        display: flex;
+        flex-direction: column; /* h2 arriba, h3 abajo */
+        flex: 1;                /* ocupa todo el espacio central */
+    }
+/* h2 alineado a la izquierda */
+    .titulo h2 {
+        font-size: 35px;
+        margin: 0;
+        text-align: left;
+        margin-left: 10px; /* ligero espacio desde el borde del área central */
+    }
+/* h3 alineado a la derecha */
+    .titulo h3 {
+        font-size: 25px;
+        margin: 0;
+        text-align: right;
+        margin-right: 10px; /* ligero espacio desde el borde del área central */
+    }
+/* --------------------------
+LÍNEA DECORATIVA VERDE
+-------------------------- */
+/* Línea verde en la parte superior */
+.linea-verde {
+    height: 15px;                /* Grosor de la línea */
+    margin-bottom: 0px;          /* Sin separación inferior */
+    background-color: #00703c;   /* Verde institucional */
+}   
+
+/* Línea azul en la parte superior */
+.linea-azul {
+    height: 15px;                /* Grosor de la línea */
+    margin-bottom: 5px;          /* Pequeño espacio inferior */
+    background-color: #002f6c;   /* Azul institucional */
+}  
+
+/* --------------------------
+CONTENIDO
+--------------------------*/
+    .contenedor {
+        display: flex;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+    }
+/* Barra lateral */
+    #Listado {
+        width: 200px;
+        background-color: #bdb7b7; /* gris claro */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 10px;
+        position: relative;
+    }
+/* Estilo de enlaces */
+    #Listado a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 15px;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+/* Iconos */
+    #Listado img {
+        width: 20px;
+        height: 20px;
+    }
+/*Lineas Verticales*/
+    .linea-azul-horizontal {
+    width: 10px;
+    height: 400px;
+    background-color: #002f6c;
+    position: absolute;
+    top: 100px;
+    left: 200px; /* antes 20px */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.linea-verde-horizontal {
+    width: 10px;
+    height: 400px;
+    background-color: #00703c;
+    position: absolute;
+    top: 230px;
+    left: 215px; /* antes 40px */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+/*Salida*/
+.top-icon {
+    position: fixed;       /* Fijo en la pantalla */
+    top: 145px;            /* 30px original + 100px más abajo */
+    right: 30px;           /* Separación desde el borde derecho */
+    width: 55px;           /* Ancho de la imagen */
+    height: 55px;          /* Alto de la imagen */
+    display: block;        /* Para que respete ancho y alto */
+    z-index: 1000;         /* Para que quede encima de otros elementos */
+}
+
+.top-icon img {
+    width: 100%;           /* Ajusta la imagen al contenedor */
+    height: 100%;
+    object-fit: contain;   /* Mantiene proporciones */
+}
+/*======================
+    404 page
+=======================*/
+
+    .page_404 {
+        background: transparent;   /* no tapará nada */
+        position: absolute;        /* fuera del flujo normal */
+        z-index: 0;                /* muy bajo, debajo de todo */
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .four_zero_four_bg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 600px;
+        height: auto;
+    }
+    .four_zero_four_bg img {
+        width: 550px;
+        height: 400px;
+        object-fit: cover;
+        position: relative;
+        top: -50px;
+        left: -100px;  /* lo mueve a la derecha */
+    }
+    .contant_box_404 p {
+        font-size: 40px;
+        font-weight: bold;
+        color: #000;
+        margin: 0;
+        text-align: center;
+        position: relative;
+        top: -150px;  /* lo sube */
+        left: -100px;  /* lo mueve a la derecha */
+    }
+
+/* --------------------------
+   USUARIOS
+-------------------------- */
+.botones-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 30px; /* Desplaza todo 30px a la derecha */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    left: 30px; /* mueve cada dropdown 30px a la derecha */
+}
+
+.dropdown-btn {
+    background: #bfbaba;
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+/* Flecha (imagen) */
+.dropdown-btn .icono {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease; /* Animación de rotación */
+}
+
+.dropdown-btn .icono.rotate {
+    transform: rotate(180deg);
+}
+
+/* Menú desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    min-width: 160px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+    margin-top: 5px;
+    z-index: 100;
+}
+
+.dropdown-content.show {
+    display: block; /* Se activa con la clase show */
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.dropdown-content a:hover {
+    background: #ddd;
+}
+/* --------------------------
+   CALENDARIO
+-------------------------- */
+    .container { 
+        display: flex; 
+        gap: 30px; 
+        margin: 50px; 
+        justify-content: center; /* Centra todo el contenido de la container */
+    }
+    .calendario { 
+    /* border: 1px solid #ccc; Eliminado */
+        padding: 10px; 
+        width: 300px; 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; /* Centra todo horizontalmente dentro del calendario */
+    }
+    .calendario-header { 
+        display: flex; 
+        flex-direction: column; 
+        align-items: center; /* Centra el encabezado y los selects */ 
+        margin-bottom: 10px; 
+    }
+    select { 
+        padding: 3px 5px; 
+        margin: 0 3px; 
+    }
+    .grid { 
+        display: grid; 
+        grid-template-columns: repeat(7, 1fr); 
+        gap: 5px; 
+        justify-items: center; /* Centra cada celda horizontalmente */
+    }
+    .dias, .dia-num { 
+        text-align: center; 
+    }
+    .dia-num { 
+        padding: 5px; 
+        border-radius: 4px; 
+    }
+    .dia-num:hover { 
+        background-color: #e0e0e0; 
+        cursor: pointer; 
+    }
+    .formulario { 
+        display: flex; 
+        flex-direction: column; 
+        gap: 10px; 
+        width: 345px; 
+    }
+    .agendar { 
+        padding: 10px; 
+        background-color: #00703c; 
+        color: white; 
+        border: none; 
+        cursor: pointer; 
+    }
+    .agendar:hover { 
+        background-color: #005a2c; 
+    }
+    .acciones {
+        display: flex;
+        align-items: center;   /* Centra verticalmente */
+        gap: 10px;             /* Espacio entre botón e imagen */
+    }
+
+    .acciones img {
+        width: 30px;   /* Ajusta el tamaño según necesites */
+        height: auto;
+        cursor: pointer;
+    }
+    #material {
+        border: 1px solid #ccc;
+        padding: 5px;
+        min-height: 150px;
+        max-height: 150px;   /* 🔹 límite de crecimiento */
+        overflow-y: auto;    /* 🔹 aparece scroll vertical */
+    }
+    .dia-num {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    }
+
+    .dia-num.selected {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .dia-num.hoy {
+        border: 2px solid #ff0000;
+        border-radius: 50%;
+    }
+
+/* --------------------------
+   ACTIVIDADES
+-------------------------- */
+
+/* --------------------------
+   ACTUALIZACION
+-------------------------- */
+/* BOTÓN GUARDAR CAMBIOS (SIN FLECHA) - SIEMPRE VISIBLE */
+.cambio-periodo-btn {
+    background: #28a745;
+    border: 2px solid #1e7e34;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    color: white;
+    transition: background 0.3s ease;
+    margin-left: 20px;
+}
+
+.cambio-periodo-btn:hover {
+    background: #218838;
+}
+
+.cambio-periodo-btn:disabled {
+    background: #6c757d;
+    border-color: #5a6268;
+    cursor: not-allowed;
+}
+
+/* DROPDOWN DE PERIODO EN CADA FILA */
+.periodo-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.periodo-flecha {
+    width: 12px;
+    height: 12px;
+    transition: transform 0.3s ease;
+}
+
+.periodo-flecha.rotate {
+    transform: rotate(180deg);
+}
+
+.periodo-opciones {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 100;
+    min-width: 120px;
+}
+
+.periodo-opciones.show {
+    display: block;
+}
+
+.periodo-opciones a {
+    display: block;
+    padding: 8px 12px;
+    color: #333;
+    text-decoration: none;
+    font-size: 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.periodo-opciones a:hover {
+    background: #f5f5f5;
+}
+
+.periodo-opciones a:last-child {
+    border-bottom: none;
+}
+
+/* BOTÓN GUARDAR  */
+.guardar-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.guardar-btn {
+    background: #6c757d;
+    border: 2px solid #5a6268;
+    border-radius: 20px;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: not-allowed;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    color: white;
+    transition: background 0.3s ease;
+}
+
+.guardar-btn:not(:disabled) {
+    background: #28a745;
+    border-color: #1e7e34;
+    cursor: pointer;
+}
+
+.guardar-btn:not(:disabled):hover {
+    background: #218838;
+}
+
+.guardar-btn img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* ===== ESTILOS PARA TABLA DE ALUMNOS ===== */
+.contenedor-tabla {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+    margin-left: 80px; /* MOVIDO MÁS A LA DERECHA */
+}
+
+.tabla-scroll-container {
+    width: 85%; /* MÁS REDUCIDO EL ANCHO */
+    max-width: 1200px; /* MÁS REDUCIDO EL MÁXIMO */
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tabla-scroll-container table {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+/* Personalizar scrollbar */
+.tabla-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tabla-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.tabla-scroll-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.tabla-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.tabla-alumnos {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.tabla-alumnos th, .tabla-alumnos td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.tabla-alumnos th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.tabla-alumnos tr:hover {
+    background-color: #f5f5f5;
+}
+
+.sin-datos {
+    padding: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    text-align: center;
+}
+
+.estado-aprobado {
+    color: green;
+    font-weight: bold;
+}
+
+.estado-reprobado {
+    color: red;
+    font-weight: bold;
+}
+
+/* --------------------------
+   CURSO
+-------------------------- */
+/* ===== ESTILOS PARA TABLA DE ALUMNOS ===== */
+.contenedor-tabla {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+    margin-left: 80px; /* MOVIDO MÁS A LA DERECHA */
+}
+
+.tabla-scroll-container {
+    width: 85%; /* MÁS REDUCIDO EL ANCHO */
+    max-width: 1200px; /* MÁS REDUCIDO EL MÁXIMO */
+    max-height: 500px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.tabla-scroll-container table {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+/* Personalizar scrollbar */
+.tabla-scroll-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tabla-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.tabla-scroll-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+}
+
+.tabla-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.tabla-alumnos {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.tabla-alumnos th, .tabla-alumnos td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.tabla-alumnos th {
+    background-color: #2c3e50;
+    color: white;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.tabla-alumnos tr:hover {
+    background-color: #f5f5f5;
+}
+
+.sin-datos {
+    padding: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    text-align: center;
+}
+
+.estado-aprobado {
+    color: green;
+    font-weight: bold;
+}
+
+.estado-reprobado {
+    color: red;
+    font-weight: bold;
+}
+
+/* --------------------------
+   SOPORTE
+-------------------------- */
